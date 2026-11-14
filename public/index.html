@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>投资交易分析</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>投资交易分析</h1>
+    <div class="group">
+      <label for="selAccount">账户</label>
+      <select id="selAccount"></select>
+    </div>
+    <div class="group">
+      <label for="selVersion">计算版本</label>
+      <select id="selVersion"></select>
+    </div>
+    <div class="group">
+      <label>估值日</label>
+      <button id="btnPrevDay" title="上一个有数据的日期">‹</button>
+      <input type="date" id="inpDate">
+      <button id="btnNextDay" title="下一个有数据的日期">›</button>
+      <button id="btnLatest">最新</button>
+    </div>
+    <div class="grow"></div>
+    <div class="group">
+      <button id="btnReset" class="danger" title="清空全部版本并重新生成样本数据">重置样本</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button data-tab="overview" class="active">总览</button>
+    <button data-tab="trades">成交与批次</button>
+    <button data-tab="cash">现金流与盈亏</button>
+    <button data-tab="data">数据与版本</button>
+  </nav>
+
+  <main>
+    <section id="tab-overview"></section>
+    <section id="tab-trades" hidden></section>
+    <section id="tab-cash" hidden></section>
+    <section id="tab-data" hidden></section>
+  </main>
+
+  <div class="modal-mask" id="modalMask">
+    <div class="modal" id="modalBox"></div>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

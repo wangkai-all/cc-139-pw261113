@@ -1,0 +1,13 @@
+{
+  "name": "investment-lotbook",
+  "version": "1.0.0",
+  "description": "投资交易分析：FIFO 批次成本、公司行动、多币种换算与版本化计算",
+  "type": "module",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "node --test test/engine.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
